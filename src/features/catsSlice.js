@@ -1,11 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = []; 
+const initialCats = []
 
 const catsSlice = createSlice({
     name: 'cats', 
     initialState: {
-        cats: initialState
+        cats: initialCats
     }, 
     reducers: {
         setCats: (state, action) => {

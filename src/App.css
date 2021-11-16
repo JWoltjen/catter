@@ -39,3 +39,12 @@ ul {
 .cat__controls div:hover {
   transform: scale(1.1)
 }
+
+.cat__upvotes {
+  position: absolute; 
+  bottom: 20px; 
+  left: 20px; 
+  font-size: 40px; 
+  color: blue; 
+  font-weight: 900; 
+}

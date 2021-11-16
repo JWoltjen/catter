@@ -28,7 +28,7 @@ function CatList() {
 
     return (
         <div>
-            <div className='container'>
+            <div className='search-container'>
                 <input 
                     className='search-input'
                     type='text'
@@ -37,7 +37,7 @@ function CatList() {
                     onChange={changeHandler}
                 />
             </div>
-            {catState && <ul>
+            {catState && <ul className='cat-container'>
                 {catState.map((cat) => (
                     <Cat cat={cat} id={cat.id} created_at={cat.created_at} tags={cat.tags}/>
                 ))}

@@ -5,7 +5,7 @@ function Cat({id, created_at, tags }) {
     const dispatch = useDispatch(); 
     
     return (
-        <li key={id}>
+        <li key={id} style={{backgroundImage: `url(https://cataas.com/cat/${id})`}}>
             <h1>{id}</h1>
         </li>
     )

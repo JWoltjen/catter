@@ -15,12 +15,20 @@ const catsSlice = createSlice({
             const targetCat = state.cats.find(cat => cat.id === action.payload); 
             if(targetCat){
                 targetCat.upvotes += 1; 
-                console.log('cat upvoted!')
             }
-        }
+        }, 
+        resetUpVotes: (state, action) => {
+            const targetCat = state.cats.find(cat => cat.id === action.payload); 
+            if(targetCat){
+                targetCat.upvotes = 0; 
+                console.log('upvotes reset!')
+            } else {
+                console.log("something wrong!")
+            }
+        }, 
     }
 }); 
 
-export const { setCats, upVoteCat } = catsSlice.actions; 
+export const { setCats, upVoteCat, resetUpVotes } = catsSlice.actions; 
 
 export default catsSlice.reducer; 

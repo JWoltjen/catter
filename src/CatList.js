@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { useDebounce } from './useDebounce'
 import {useSelector, useDispatch} from 'react-redux'
 import {setCats} from './features/catsSlice'
 import Cat from './Cat'
@@ -21,8 +22,9 @@ function CatList() {
     const changeHandler = (e) => {
         e.preventDefault()
         setQuery(e.target.value)
-        fetchData()
     }
+
+    useDebounce(query, 500, fetchData)
 
     return (
         <div>
@@ -34,7 +36,6 @@ function CatList() {
                     value={query}
                     onChange={changeHandler}
                 />
-                <button className='button' onClick={changeHandler}>Search</button>
             </div>
             {catState && <ul>
                 {catState.map((cat) => (

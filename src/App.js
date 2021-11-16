@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import CatList from './CatList';
+import CatList from './CatList'; 
+import Header from './Header'; 
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
-      <h2>Please enjoy some cats</h2>
+      <Header/> 
       <CatList/>
     </div>
   );

@@ -5,8 +5,8 @@ ul {
 }
 
 .cat {
-  width: 500px; 
-  height: 500px; 
+  width: 400px; 
+  height: 400px; 
   position: relative; 
   filter: brightness(0.4); 
   transition: all .3s ease; 
@@ -75,6 +75,6 @@ header div {
 
 .cat-container {
   display: grid; 
-  grid: 400px/auto auto auto;  
-  gap: 30px; 
+  grid: 400px/ auto auto auto auto;  
+  gap: 1rem; 
 }

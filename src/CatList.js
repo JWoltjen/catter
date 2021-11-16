@@ -4,6 +4,7 @@ import {setCats} from './features/catsSlice'
 
 function CatList() {
     const dispatch = useDispatch(); 
+    const catState = useSelector(state => state.cats)
     useEffect(() => {
         fetchData()
     }, [])
@@ -16,8 +17,11 @@ function CatList() {
 
     return (
         <div>
-            
-            <pre>hello</pre>
+            {catState && <ul>
+                {catState.map((cat) => (
+                    <li key={cat.id}>{cat.id}</li>
+                ))}
+            </ul>}
         </div>
     )
   

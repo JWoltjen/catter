@@ -21,3 +21,21 @@ ul {
   width: 100%; 
   background-size: cover; 
 }
+
+.cat__controls {
+  display: flex; 
+  position: absolute; 
+  right: 0; 
+  top: 0; 
+  font-size: 40px; 
+  letter-spacing: 10px; 
+}
+
+.cat__controls div {
+  transition: all .3s ease; 
+  cursor: pointer
+}
+
+.cat__controls div:hover {
+  transform: scale(1.1)
+}

@@ -22,7 +22,7 @@ function CatList() {
         <div>
             {catState && <ul>
                 {catState.map((cat) => (
-                    <Cat id={cat.id} created_at={cat.created_at} tags={cat.tags}/>
+                    <Cat cat={cat} id={cat.id} created_at={cat.created_at} tags={cat.tags}/>
                 ))}
             </ul>}
         </div>

@@ -1,20 +1,21 @@
 import React from 'react'
 import {useDispatch} from 'react-redux'
 
-function Cat({id, created_at, tags }) {
+function Cat({cat, id, created_at, tags }) {
     const dispatch = useDispatch(); 
     
     return (
-    <>
+        <div className='cat'>
        <div className='cat__controls'>
             <div>⭐</div>
             <div>🔄</div>
         </div>
-            <div className='cat'>
+            {cat.upvotes > 0 && <div className='cat_upvotes'>{cat.upvotes}⭐</div>}
+
+           
             <li className='cat__image' key={id} style={{backgroundImage: `url(https://cataas.com/cat/${id})`,}}>
             </li>
             </div>
-    </>
     )
 }
 

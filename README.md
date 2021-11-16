@@ -8,7 +8,7 @@ Catter makes a call to third-party API which fetches 10 cats, adds an upvote pro
 
 ## Cats as a Service API
 
-
+This demo takes advantage of [Cats as a Service API](https://cataas.com/) created by @kevinbalicot . 
 
 ## How does CreateSlice() work? 
 

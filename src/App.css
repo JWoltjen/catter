@@ -48,3 +48,19 @@ ul {
   color: blue; 
   font-weight: 900; 
 }
+
+header {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 32px; 
+}
+
+header h1 {
+  font-weight: 900; 
+  text-transform: uppercase; 
+}
+
+header div {
+  cursor: pointer; 
+}

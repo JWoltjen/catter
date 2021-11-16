@@ -26,9 +26,12 @@ const catsSlice = createSlice({
                 console.log("something wrong!")
             }
         }, 
+        resetAllCats: (state) => {
+            state.cats.forEach(cat => cat.upvotes = 0)
+        }
     }
 }); 
 
-export const { setCats, upVoteCat, resetUpVotes } = catsSlice.actions; 
+export const { setCats, upVoteCat, resetUpVotes, resetAllCats } = catsSlice.actions; 
 
 export default catsSlice.reducer; 

@@ -10,7 +10,7 @@ function Header() {
 
     return (
         <header>
-            <h1>Catter</h1>
+            <h1>Welcome to Catter</h1>
             <h2>Please enjoy some cats</h2>
                 <div>Total {starsTotal} ⭐</div> 
                 <div onClick={() => dispatch(resetAllCats())}>Reset All 🔄</div>

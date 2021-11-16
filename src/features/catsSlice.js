@@ -10,10 +10,17 @@ const catsSlice = createSlice({
     reducers: {
         setCats: (state, action) => {
             state.cats = action.payload
+        }, 
+        upVoteCat: (state, action) => {
+            const targetCat = state.cats.find(cat => cat.id === action.payload); 
+            if(targetCat){
+                targetCat.upvotes += 1; 
+                console.log('cat upvoted!')
+            }
         }
     }
 }); 
 
-export const { setCats } = catsSlice.actions; 
+export const { setCats, upVoteCat } = catsSlice.actions; 
 
 export default catsSlice.reducer; 
